@@ -9,10 +9,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var beeB: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        beeB.backgroundImage
     }
+    
     
 
 }
