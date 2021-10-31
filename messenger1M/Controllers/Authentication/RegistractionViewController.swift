@@ -38,7 +38,7 @@ class RegistractionViewController: UIViewController, UIImagePickerControllerDele
     func getPhoto(type: UIImagePickerController.SourceType){
         let Pic = UIImagePickerController()
         Pic.sourceType = type
-        Pic.allowsEditing = false  /* لقص الصورة والتعديل عليها */
+        Pic.allowsEditing = true  /* لقص الصورة والتعديل عليها */
         Pic.delegate = self
         present(Pic, animated: true, completion: nil) /*  هنا فتحنا imageController لازم الحين نسوي لها ديسميس تحت بدالة الديدفينيش*/
     }
@@ -52,7 +52,7 @@ class RegistractionViewController: UIViewController, UIImagePickerControllerDele
 //            print("Photo Not Found.!!")
 //        }
 //        إذا مابي أستخدم هنا if أقدر أستخدم بداله guard
-        guard  let photo = info[.originalImage] as? UIImage else{
+        guard  let photo = info[.editedImage] as? UIImage else{
             print("Photo Not Found.!!")
             return
         }
