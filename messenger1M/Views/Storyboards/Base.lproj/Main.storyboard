@@ -16,42 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bee" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmV-YZ-CBl">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="288"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="288" id="Rm4-gw-2QX"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1v-FO-afB">
-                                <rect key="frame" x="0.0" y="288" width="414" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="RS2-vY-bJt"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1v-FO-afB">
+                                <rect key="frame" x="20" y="288" width="370" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                 <color key="textColor" red="0.99991220235824585" green="0.84329193830490112" blue="0.25886523723602295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pass" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obn-y4-Pok">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pass" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obn-y4-Pok">
                                 <rect key="frame" x="24" y="480" width="366" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="DLV-Ol-tSx"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGg-1q-tJY">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGg-1q-tJY">
                                 <rect key="frame" x="24" y="412" width="366" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="z9G-wm-vL4"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" textContentType="username"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bob-OA-OT7">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bob-OA-OT7">
                                 <rect key="frame" x="269" y="532" width="135" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="iH9-NW-C4v"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -122,25 +108,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bee" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmV-YZ-CBl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cmV-YZ-CBl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2OR-vW-PxO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f1v-FO-afB" secondAttribute="trailing" id="4vY-LK-szS"/>
-                            <constraint firstItem="Obn-y4-Pok" firstAttribute="top" secondItem="rGg-1q-tJY" secondAttribute="bottom" constant="24" id="7uZ-OJ-jKW"/>
-                            <constraint firstItem="bob-OA-OT7" firstAttribute="top" secondItem="Obn-y4-Pok" secondAttribute="bottom" constant="12" id="9hv-3i-stS"/>
-                            <constraint firstItem="cmV-YZ-CBl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DL6-8d-yB5"/>
-                            <constraint firstItem="Obn-y4-Pok" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="GdU-Qw-7kW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rGg-1q-tJY" secondAttribute="trailing" constant="24" id="IDs-lm-D8L"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bob-OA-OT7" secondAttribute="trailing" constant="24" id="Req-v2-s11"/>
-                            <constraint firstItem="f1v-FO-afB" firstAttribute="top" secondItem="cmV-YZ-CBl" secondAttribute="bottom" id="SPD-gw-1n3"/>
-                            <constraint firstItem="rGg-1q-tJY" firstAttribute="top" secondItem="f1v-FO-afB" secondAttribute="bottom" constant="24" id="d4z-Da-mxi"/>
-                            <constraint firstItem="cmV-YZ-CBl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dFH-iv-gsz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Obn-y4-Pok" secondAttribute="trailing" constant="24" id="iSW-mT-fIQ"/>
-                            <constraint firstItem="f1v-FO-afB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nju-cw-F5c"/>
-                            <constraint firstItem="f1v-FO-afB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pSZ-0B-Evc"/>
-                            <constraint firstItem="rGg-1q-tJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="zsd-mA-3KN"/>
+                            <constraint firstItem="cmV-YZ-CBl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G58-bK-AvD"/>
+                            <constraint firstItem="cmV-YZ-CBl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aYZ-3r-U74"/>
+                            <constraint firstItem="cmV-YZ-CBl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cb5-Yy-scb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uiu-7x-Ybi">
@@ -154,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884.05797101449286" y="97.767857142857139"/>
+            <point key="canvasLocation" x="633" y="96"/>
         </scene>
         <!--Registraction View Controller-->
         <scene sceneID="8W7-Fe-1ek">
