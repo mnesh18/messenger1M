@@ -6,21 +6,53 @@
 //
 
 import UIKit
-import AVFoundation
+import Firebase
 
 class RegistractionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet weak var ImgPhoto: UIImageView!
+    @IBOutlet weak var FirstNameR: UITextField!
+    @IBOutlet weak var LastNameR: UITextField!
     
+    @IBOutlet weak var emailR: UITextField!
     
+    @IBOutlet weak var PasswordR: UITextField!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    @IBAction func RegisterBtn(_ sender: UIButton) {
+        signupUser()
+    }
     @IBAction func BtnTakePhoto(_ sender: Any) {
         
         showPhotoAlert()
     }
+ 
+    func signupUser () {
+        Auth.auth().createUser(withEmail: emailR.text!, password: PasswordR.text!) { authResult, error in
+            if let error = error {
+                print("Error status: \(error.localizedDescription)")
+            } else {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ConversationID") as! ConversationViewController
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func showPhotoAlert(){
         let alert = UIAlertController(title: "Take Photo From: ", message: nil, preferredStyle: .actionSheet)
@@ -43,6 +75,8 @@ class RegistractionViewController: UIViewController, UIImagePickerControllerDele
         present(Pic, animated: true, completion: nil) /*  هنا فتحنا imageController لازم الحين نسوي لها ديسميس تحت بدالة الديدفينيش*/
     }
     
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         dismiss(animated: true, completion: nil)
         
@@ -58,6 +92,9 @@ class RegistractionViewController: UIViewController, UIImagePickerControllerDele
         }
         ImgPhoto.image = photo
     } /* Info هنا هو القاموس اللي بجيب منه الصور */
+    
+    
+    
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)

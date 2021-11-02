@@ -24,6 +24,7 @@
 		7E89ABFC272A84F400A952E0 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89ABFB272A84F400A952E0 /* NewConversationViewController.swift */; };
 		7E89ABFF272A85F200A952E0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89ABFE272A85F200A952E0 /* ProfileViewController.swift */; };
 		7E94907B272EDE92003AF8DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E94907A272EDE92003AF8DC /* GoogleService-Info.plist */; };
+		7E985F3827306ED8005ECEA4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E985F3727306ED8005ECEA4 /* DatabaseManager.swift */; };
 		D6230C6B7654406E59A7029D /* Pods_messenger1M.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7577C95FC9BA894D99E0FE /* Pods_messenger1M.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		7E89ABFB272A84F400A952E0 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		7E89ABFE272A85F200A952E0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7E94907A272EDE92003AF8DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E985F3727306ED8005ECEA4 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		8712FA3235C4A9DC712CD9BF /* Pods-messenger1M-messenger1MUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messenger1M-messenger1MUITests.release.xcconfig"; path = "Target Support Files/Pods-messenger1M-messenger1MUITests/Pods-messenger1M-messenger1MUITests.release.xcconfig"; sourceTree = "<group>"; };
 		926209396335B7409B12BD4D /* Pods-messenger1MTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messenger1MTests.debug.xcconfig"; path = "Target Support Files/Pods-messenger1MTests/Pods-messenger1MTests.debug.xcconfig"; sourceTree = "<group>"; };
 		954F55EB010B5BB43CCC499B /* Pods-messenger1M.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messenger1M.release.xcconfig"; path = "Target Support Files/Pods-messenger1M/Pods-messenger1M.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,7 +115,6 @@
 				926209396335B7409B12BD4D /* Pods-messenger1MTests.debug.xcconfig */,
 				00D5707B3F3E49D289099B89 /* Pods-messenger1MTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -192,6 +193,7 @@
 		7E89ABEF272A7F3900A952E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7E985F3727306ED8005ECEA4 /* DatabaseManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -498,6 +500,7 @@
 				7E89ABEE272A7EF200A952E0 /* Extensions.swift in Sources */,
 				7E89ABFF272A85F200A952E0 /* ProfileViewController.swift in Sources */,
 				7E89ABF7272A841F00A952E0 /* RegistractionViewController.swift in Sources */,
+				7E985F3827306ED8005ECEA4 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
