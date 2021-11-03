@@ -9,6 +9,8 @@ pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Analytics'
+pod 'Firebase/Storage'
+
 
 
   # Pods for messenger1M

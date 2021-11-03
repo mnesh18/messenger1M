@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
         FirebaseAuth.Auth.auth().signIn(withEmail: emailS.text!, password: PasswordS.text!, completion: { authResult, error in
             guard let result = authResult, error == nil else {
                 print("Failed to log in user with email \(String(describing: self.emailS))")
+                self.alertUserLoginError(message: "\(error!.localizedDescription)")
                 return
             }
             let user = result.user
@@ -36,4 +37,12 @@ class LoginViewController: UIViewController {
             self.present(vc, animated: true, completion: nil)
         })
     }
+    
+    func alertUserLoginError (message: String = " Please enter Signup to create a new account") {
+        let alert = UIAlertController(title: "Oops", message: message , preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        
+        present(alert, animated: true)
+    }
+    
 }
