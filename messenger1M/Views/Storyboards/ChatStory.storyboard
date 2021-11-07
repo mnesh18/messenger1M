@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat-->
+        <scene sceneID="6O3-Tc-ZIX">
+            <objects>
+                <viewController storyboardIdentifier="ConversationID" id="GJO-Dd-G9A" customClass="ConversationViewController" customModule="messenger1M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4z6-il-Hnd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DWp-Bc-unC"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat" id="ypO-Mz-M9r">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="LZ3-c3-Bdq">
+                            <connections>
+                                <segue destination="0NB-Qt-jrd" kind="show" id="Nlm-bU-DN3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="te8-2d-R0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4626" y="-873"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yue-eI-l4o">
+            <objects>
+                <tabBarController storyboardIdentifier="TapbarID" id="ypq-h5-aNv" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Ys-46-AZI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zGF-9m-L1M" kind="relationship" relationship="viewControllers" id="QwN-cO-zsO"/>
+                        <segue destination="n1e-8l-9wP" kind="relationship" relationship="viewControllers" id="htB-jg-F4X"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bS2-cf-wtz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2441" y="-569"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="A56-6g-ls7">
+            <objects>
+                <viewController storyboardIdentifier="NewChatID" id="0NB-Qt-jrd" customClass="ChatViewController" customModule="messenger1M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TW6-Pe-Gly">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NlL-QH-Tib"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tdO-qT-z6X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhl-pe-dnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5307" y="-873"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="TUo-rl-kb1">
+            <objects>
+                <viewController storyboardIdentifier="ProfileID" id="j5Y-vo-bIU" customClass="ProfileViewController" customModule="messenger1M" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bn5-jZ-E6f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="Ean-fA-wCX">
+                                <rect key="frame" x="97" y="139" width="189" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="LbUserNameID" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QV7-ln-hLA" userLabel="Lbl User Name">
+                                <rect key="frame" x="108" y="305" width="178" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpL-40-ckS" userLabel="Lbl User Email">
+                                <rect key="frame" x="108" y="374" width="178" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGA-nt-IlD">
+                                <rect key="frame" x="72" y="600" width="270" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.72641726179999999" green="0.68194586180000005" blue="0.93873129980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out">
+                                    <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="LogUotBtn:" destination="j5Y-vo-bIU" eventType="touchUpInside" id="voS-bw-4X5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2l2-ea-1Iw"/>
+                        <color key="backgroundColor" red="0.49652044080000002" green="0.2331554109" blue="0.84267407660000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="REl-7j-6GZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nk6-jC-E9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4582.608695652174" y="-190.17857142857142"/>
+        </scene>
+        <!--Conversation-->
+        <scene sceneID="LEU-m1-rGa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zGF-9m-L1M" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Conversation" id="vh2-Gb-LZw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rP8-jo-o4g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="24"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GJO-Dd-G9A" kind="relationship" relationship="rootViewController" id="uJF-o5-j24"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npi-5t-VKR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3792.753623188406" y="-872.54464285714278"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="MsX-yo-bh3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n1e-8l-9wP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="sFB-K4-Mxv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Ql0-p7-XBi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="24"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j5Y-vo-bIU" kind="relationship" relationship="rootViewController" id="aKN-YH-jVC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HK8-d9-xoh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3793" y="-189"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ProfilePic" width="500" height="500"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

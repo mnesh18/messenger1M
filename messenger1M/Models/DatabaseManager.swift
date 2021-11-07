@@ -46,16 +46,7 @@ final class DatabaseManger {
 //        //database.child("foo").setValue(nil)      or
 //        database.child("foo").setValue(["something":true])
 //    }
-    
-    
-
-
-        
 }
-
-
-
-                
                 
 // MARK: - account management
 extension DatabaseManger { /* insert new user to Database */

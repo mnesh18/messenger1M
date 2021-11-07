@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="messenger1M" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginID" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="messenger1M" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,12 +25,12 @@
                                         <color key="textColor" red="0.99991220235824585" green="0.84329193830490112" blue="0.25886523723602295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pass" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obn-y4-Pok">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obn-y4-Pok">
                                         <rect key="frame" x="0.0" y="400" width="414" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGg-1q-tJY">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGg-1q-tJY">
                                         <rect key="frame" x="0.0" y="350" width="414" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" textContentType="username"/>
@@ -72,6 +72,9 @@
                                         <buttonConfiguration key="configuration" style="plain">
                                             <backgroundConfiguration key="background" image="google logo"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="GoogleLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vVf-vQ-ZyB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Geu-bP-8HH">
                                         <rect key="frame" x="200" y="670" width="50" height="50"/>
@@ -83,6 +86,9 @@
                                         <buttonConfiguration key="configuration" style="plain">
                                             <backgroundConfiguration key="background" image="Facebook logo"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="FacebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Usn-RJ-4IE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xz8-3r-Rjr">
                                         <rect key="frame" x="325" y="670" width="50" height="50"/>
@@ -131,6 +137,20 @@
                                             <constraint firstAttribute="width" constant="400" id="yHd-qy-dQd"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJA-RV-6ae" userLabel="lblUserName">
+                                        <rect key="frame" x="110" y="463" width="103" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYW-LC-WzL" userLabel="lblUserEmail">
+                                        <rect key="frame" x="211" y="458" width="103" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Iiv-5U-OFd" firstAttribute="top" secondItem="Nmk-jn-VNI" secondAttribute="bottom" constant="50" id="2ih-w0-kBT"/>
@@ -186,11 +206,14 @@
                         <outlet property="PasswordS" destination="Obn-y4-Pok" id="FEM-8n-3kI"/>
                         <outlet property="beeB" destination="taO-TK-S7C" id="bRw-hd-qCq"/>
                         <outlet property="emailS" destination="rGg-1q-tJY" id="RYt-O6-cp5"/>
+                        <outlet property="lblUserEmail" destination="nYW-LC-WzL" id="alM-p5-khr"/>
+                        <outlet property="lblUserName" destination="MJA-RV-6ae" id="eD8-7H-MZw"/>
+                        <segue destination="6n3-sp-9Vc" kind="show" identifier="GotoChatStory" id="2MC-6P-4Zm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="530" y="102"/>
+            <point key="canvasLocation" x="1141" y="102"/>
         </scene>
         <!--Registraction View Controller-->
         <scene sceneID="8W7-Fe-1ek">
@@ -284,7 +307,7 @@
                                     <color key="baseForegroundColor" red="0.99991220235824585" green="0.84329193830490112" blue="0.25886523723602295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="InSegue" id="NeA-ml-IbB"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="qfe-Zi-eGh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PA-VW-NYl">
@@ -301,7 +324,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="Y0o-8I-eMY">
-                                <rect key="frame" x="113" y="70" width="189" height="139"/>
+                                <rect key="frame" x="113" y="70" width="189" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BRG-l5-X5a">
@@ -337,52 +360,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0u-ju-8Cg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1439" y="102"/>
+            <point key="canvasLocation" x="2214" y="102"/>
         </scene>
-        <!--Conversation View Controller-->
-        <scene sceneID="G3l-uY-3oQ">
+        <!--TapbarID-->
+        <scene sceneID="io1-rK-J1H">
             <objects>
-                <viewController storyboardIdentifier="ConversationID" id="Diz-zv-yqg" customClass="ConversationViewController" customModule="messenger1M" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qlq-QZ-5rm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="lrn-IE-ycM"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2DP-Ni-0qi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ChatStory" referencedIdentifier="TapbarID" id="6n3-sp-9Vc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0RO-hx-bJ3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mJL-a5-1q5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2304" y="102"/>
-        </scene>
-        <!--New Conversation View Controller-->
-        <scene sceneID="pA8-dJ-N2p">
-            <objects>
-                <viewController id="nKl-T7-dkb" customClass="NewConversationViewController" customModule="messenger1M" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7yI-WV-DeV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="l9U-AH-yyU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jf-9Z-gYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2952.1739130434785" y="95.758928571428569"/>
-        </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="Xs0-MR-f6c">
-            <objects>
-                <viewController id="2gy-Ka-eIU" customClass="ProfileViewController" customModule="messenger1M" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oce-hl-Rnq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vPj-aB-6rU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IfK-0i-Bwb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3615.9420289855075" y="95.758928571428569"/>
+            <point key="canvasLocation" x="1664" y="-166"/>
         </scene>
     </scenes>
     <resources>
@@ -394,9 +382,6 @@
         <image name="google logo" width="1200" height="1200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

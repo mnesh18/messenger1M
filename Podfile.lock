@@ -1,6 +1,33 @@
 PODS:
-  - Firebase/Analytics (8.9.0):
-    - Firebase/Core
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
+  - FacebookCore (0.9.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FacebookLogin (0.9.0):
+    - FacebookCore (~> 0.9.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKLoginKit (~> 5.0)
+  - FacebookShare (0.9.0):
+    - FacebookCore (~> 0.9.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKShareKit (~> 5.0)
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.15.1):
+    - FBSDKLoginKit/Login (= 5.15.1)
+  - FBSDKLoginKit/Login (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKShareKit (5.15.1):
+    - FBSDKShareKit/Share (= 5.15.1)
+  - FBSDKShareKit/Share (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
   - Firebase/Auth (8.9.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 8.9.0)
@@ -82,6 +109,10 @@ PODS:
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleSignIn (6.0.2):
+    - AppAuth (~> 1.4)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleUtilities/AppDelegateSwizzler (7.6.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -101,24 +132,50 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.6.0):
     - GoogleUtilities/Logger
+  - GTMAppAuth (1.2.2):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
+  - InputBarAccessoryView (5.4.0):
+    - InputBarAccessoryView/Core (= 5.4.0)
+  - InputBarAccessoryView/Core (5.4.0)
+  - JGProgressHUD (2.2)
   - leveldb-library (1.22.1)
+  - MessageKit (3.7.0):
+    - InputBarAccessoryView (~> 5.4.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
 
 DEPENDENCIES:
-  - Firebase/Analytics
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
+  - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - GoogleSignIn
+  - JGProgressHUD
+  - MessageKit
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
+    - AppAuth
+    - FacebookCore
+    - FacebookLogin
+    - FacebookShare
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -129,13 +186,26 @@ SPEC REPOS:
     - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleSignIn
     - GoogleUtilities
+    - GTMAppAuth
     - GTMSessionFetcher
+    - InputBarAccessoryView
+    - JGProgressHUD
     - leveldb-library
+    - MessageKit
     - nanopb
     - PromisesObjC
+    - SDWebImage
 
 SPEC CHECKSUMS:
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
+  FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
+  FacebookShare: 85968ad1b1606c4944fb154924e425fd29184ea5
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
+  FBSDKShareKit: 259737eab3cc807087374553abdf588b3096ba55
   Firebase: 13d8d96499e2635428d5bf0ec675df21f95d9a95
   FirebaseAnalytics: 3a11ed901750e1ebcbe35e75915ff079878ea385
   FirebaseAuth: 2b78b2a32c07b3ecfa4970bdf1d3632b8304099b
@@ -146,12 +216,18 @@ SPEC CHECKSUMS:
   FirebaseStorage: 452c98c31ccb40b819764bf3039426c4388d9939
   GoogleAppMeasurement: b54a857d347703d67c7a6f23713760c9bcfe9008
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
+  GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
   GoogleUtilities: 684ee790a24f73ebb2d1d966e9711c203f2a4237
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  InputBarAccessoryView: 74d471ab1fa1736806be50328df79257e52865a9
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+  MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
 
-PODFILE CHECKSUM: 071a8a354c81c83a83bc904bb55815b10f51b443
+PODFILE CHECKSUM: de665f9b20d76991131be4ded7c5baea6d9af4bc
 
 COCOAPODS: 1.11.2

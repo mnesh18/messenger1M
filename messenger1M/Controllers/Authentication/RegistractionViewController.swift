@@ -53,7 +53,7 @@ class RegistractionViewController: UIViewController, UIImagePickerControllerDele
     
 
     
-     func alertUserLoginError (message: String = " Please enter Signup to create a new account") {
+     func alertUserLoginError (message: String = "you already have account please enter Signin to Login") {
          let alert = UIAlertController(title: "Oops", message: message , preferredStyle: .alert)
          alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
          
@@ -88,7 +88,7 @@ class RegistractionViewController: UIViewController, UIImagePickerControllerDele
         }
     }
     
- 
+
     
 //    @objc private func didTapRegister() {
 //        let vc = RegistractionViewController()

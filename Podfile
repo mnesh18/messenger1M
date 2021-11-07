@@ -8,9 +8,26 @@ target 'messenger1M' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
-pod 'Firebase/Analytics'
+# pod 'Firebase/Analytics'
 pod 'Firebase/Storage'
 
+
+#login to facebook
+pod 'FBSDKLoginKit'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
+
+
+#MessageKit
+pod 'MessageKit'
+pod 'JGProgressHUD'
+# pod 'RealmSwift'
+pod 'SDWebImage'
+
+pod 'GoogleSignIn'
+# pod 'Firebase/Firestore'
+# pod 'SDWebImage'
 
 
   # Pods for messenger1M
